@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Expense Tracker</h1>
+    <h3>Welcome to your personalised tracker</h3>
+
+
+    <!-- ==================== INCOME ==================== -->
+
+    <form id="incomeForm">
+
+        <h3>Income</h3>
+
+        <label>Amount:</label>
+        <input type="number" id="inAmt" min="1" required>
+
+        <label>Date:</label>
+        <input type="date" id="inDate" required>
+
+        <label>Description:</label>
+        <textarea id="inDes"></textarea>
+
+        <label>Category:</label>
+        <select id="inCat" required>
+            <option value="">Select</option>
+            <option>Salary</option>
+            <option>Others</option>
+        </select>
+
+        <button type="submit">Add</button>
+
+    </form>
+
+
+    <!-- ==================== EXPENSE ==================== -->
+
+    <form id="expenseForm">
+
+        <h3>Expense</h3>
+
+        <label>Amount:</label>
+        <input type="number" id="exAmt" min="1" required>
+
+        <label>Date:</label>
+        <input type="date" id="exDate" required>
+
+        <label>Description:</label>
+        <textarea id="exDes"></textarea>
+
+        <label>Category:</label>
+        <select id="exCat" required>
+            <option value="">Select</option>
+            <option>Food</option>
+            <option>Travel</option>
+            <option>Health</option>
+            <option>Entertainment</option>
+            <option>Groceries</option>
+            <option>Education</option>
+            <option>Others</option>
+        </select>
+
+        <button type="submit">Add</button>
+
+    </form>
+
+
+    <!-- ==================== TRANSACTIONS ==================== -->
+
+    <table>
+
+        <tr>
+            <th colspan="6" class="transactions-title">
+                Transactions
+            </th>
+        </tr>
+
+        <tr>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+
+        <tbody id="transactionTable">
+        </tbody>
+
+    </table>
+
+
+    <!-- ==================== SUMMARY ==================== -->
+
+    <h3>Summary</h3>
+
+    <div class="summary">
+
+        <label>Total Income:</label>
+        <span id="totalIncome">0</span>
+
+        <br><br>
+
+        <label>Total Expense:</label>
+        <span id="totalExpense">0</span>
+
+        <br><br>
+
+        <label>Current Balance:</label>
+        <span id="currentBalance">0</span>
+
+        <br><br>
+
+        <button type="button" id="calculateBalance">
+            Calculate Balance
+        </button>
+
+    </div>
+
+
+    <!-- ==================== MONTHLY EXPENSE SUMMARY ==================== -->
+
+    <h3>Monthly Expense Summary</h3>
+
+    <div class="summary">
+
+        <label>Select Month:</label>
+        <input type="month" id="monthFilter">
+
+        <label>Total Monthly Expense:</label>
+        <span id="monthlyExpense">0</span>
+
+        <br><br>
+
+        <button type="button" id="calculateMonthlyExpense">
+            Calculate Monthly Expense
+        </button>
+
+    </div>
+
+
+    <!-- ==================== FILTER ==================== -->
+
+    <h3>Filter Transactions</h3>
+
+    <div class="filter-section">
+
+        <label>Transaction Type:</label>
+
+        <select id="typeFilter">
+            <option>All</option>
+            <option>Income</option>
+            <option>Expense</option>
+        </select>
+
+
+        <label>Category:</label>
+
+        <select id="categoryFilter">
+            <option>All</option>
+            <option>Food</option>
+            <option>Travel</option>
+            <option>Health</option>
+            <option>Entertainment</option>
+            <option>Groceries</option>
+            <option>Education</option>
+            <option>Others</option>
+            <option>Salary</option>
+        </select>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
